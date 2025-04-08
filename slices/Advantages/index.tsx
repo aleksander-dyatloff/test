@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Container from "@/components/Container/Container";
@@ -14,7 +14,7 @@ import TrendUpIcon from "@/icons/TrendUpIcon";
  */
 export type AdvantagesProps = SliceComponentProps<Content.AdvantagesSlice>;
 
-const iconsMap = {
+const iconsMap: Record<number, ReactNode> = {
   0: <FlashIcon />,
   1: <Setting3Icon />,
   2: <DocumentTextIcon />,

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import * as styles from "./Partnerships.css";
@@ -13,13 +13,13 @@ import { theme } from "@/styles/theme.css";
  */
 export type PartnershipsProps = SliceComponentProps<Content.PartnershipsSlice>;
 
-const iconsMap = {
+const iconsMap: Record<number, ReactNode> = {
   0: <WalletIcon />,
   1: <BriefcaseIcon />,
   2: <ShieldTickIcon />,
 };
 
-const colorsMap = {
+const colorsMap: Record<number, string> = {
   0: theme.colors.secondary.Purple,
   1: theme.colors.primary["Green-100"],
   2: theme.colors.secondary.Pink,

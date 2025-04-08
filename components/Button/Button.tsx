@@ -1,4 +1,9 @@
-import { FC, PropsWithChildren } from "react";
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  FC,
+  PropsWithChildren,
+} from "react";
 import * as styles from "./Button.css";
 import classNames from "classnames";
 
@@ -6,12 +11,15 @@ interface Props {
   variant?: "primary" | "outline" | "ghost" | "link";
 }
 
-const Button: FC<PropsWithChildren<Props>> = ({
-  variant = "primary",
-  children,
-  className,
-  ...restProps
-}) => {
+const Button: FC<
+  PropsWithChildren<
+    Props &
+      DetailedHTMLProps<
+        ButtonHTMLAttributes<HTMLButtonElement>,
+        HTMLButtonElement
+      >
+  >
+> = ({ variant = "primary", children, className, ...restProps }) => {
   return (
     <button
       className={classNames(styles.root, styles.variant[variant], className)}

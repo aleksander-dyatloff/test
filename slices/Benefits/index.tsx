@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Container from "@/components/Container/Container";
@@ -14,13 +14,13 @@ import { theme } from "@/styles/theme.css";
  */
 export type BenefitsProps = SliceComponentProps<Content.BenefitsSlice>;
 
-const iconsMap = {
+const iconsMap: Record<number, ReactNode> = {
   0: <SquareIcon />,
   1: <StatusUpIcon />,
   2: <ConvertShapeIcon />,
 };
 
-const colorsMap = {
+const colorsMap: Record<number, string> = {
   0: theme.colors.secondary.Purple,
   1: theme.colors.primary["Green-100"],
   2: theme.colors.secondary.Pink,
