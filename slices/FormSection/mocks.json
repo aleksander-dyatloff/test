@@ -1,0 +1,97 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "or",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "height",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+					"width": 4000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+				"width": 4000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "most",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"send_action_text": {
+				"__TYPE__": "FieldContent",
+				"value": "large",
+				"type": "Text"
+			},
+			"name_field_label": {
+				"__TYPE__": "FieldContent",
+				"value": "answer",
+				"type": "Text"
+			},
+			"name_field_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "except",
+				"type": "Text"
+			},
+			"email_field_label": {
+				"__TYPE__": "FieldContent",
+				"value": "factor",
+				"type": "Text"
+			},
+			"email_field_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "twenty",
+				"type": "Text"
+			},
+			"company_name_label": {
+				"__TYPE__": "FieldContent",
+				"value": "necessary",
+				"type": "Text"
+			},
+			"company_name_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "stream",
+				"type": "Text"
+			},
+			"website_field_label": {
+				"__TYPE__": "FieldContent",
+				"value": "settle",
+				"type": "Text"
+			},
+			"website_field_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "lucky",
+				"type": "Text"
+			},
+			"comment_field_label": {
+				"__TYPE__": "FieldContent",
+				"value": "complete",
+				"type": "Text"
+			},
+			"comment_field_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "log",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

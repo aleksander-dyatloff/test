@@ -5,6 +5,8 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type LandingPageDocumentDataSlicesSlice =
+  | FormSectionSlice
+  | FaqSectionSlice
   | BannerSlice
   | PartnershipsSlice
   | BenefitsSlice
@@ -451,6 +453,271 @@ type BrandTrafficRiskSliceVariation = BrandTrafficRiskSliceDefault;
 export type BrandTrafficRiskSlice = prismic.SharedSlice<
   "brand_traffic_risk",
   BrandTrafficRiskSliceVariation
+>;
+
+/**
+ * Item in *FaqSection → Default → Primary → Items*
+ */
+export interface FaqSectionSliceDefaultPrimaryItemsItem {
+  /**
+   * Item Title field in *FaqSection → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_section.default.primary.items[].item_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  item_title: prismic.KeyTextField;
+
+  /**
+   * Item Answer field in *FaqSection → Default → Primary → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_section.default.primary.items[].item_answer
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  item_answer: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *FaqSection → Default → Primary*
+ */
+export interface FaqSectionSliceDefaultPrimary {
+  /**
+   * Title field in *FaqSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_section.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *FaqSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_section.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Items field in *FaqSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_section.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  items: prismic.GroupField<Simplify<FaqSectionSliceDefaultPrimaryItemsItem>>;
+}
+
+/**
+ * Default variation for FaqSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FaqSection*
+ */
+type FaqSectionSliceVariation = FaqSectionSliceDefault;
+
+/**
+ * FaqSection Shared Slice
+ *
+ * - **API ID**: `faq_section`
+ * - **Description**: FaqSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSectionSlice = prismic.SharedSlice<
+  "faq_section",
+  FaqSectionSliceVariation
+>;
+
+/**
+ * Primary content in *FormSection → Default → Primary*
+ */
+export interface FormSectionSliceDefaultPrimary {
+  /**
+   * Title field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Image field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Send Action Text field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.send_action_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  send_action_text: prismic.KeyTextField;
+
+  /**
+   * Name Field Label field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.name_field_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name_field_label: prismic.KeyTextField;
+
+  /**
+   * Name Field Placeholder field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.name_field_placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name_field_placeholder: prismic.KeyTextField;
+
+  /**
+   * Email Field Label field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.email_field_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_field_label: prismic.KeyTextField;
+
+  /**
+   * Email Field Placeholder field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.email_field_placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_field_placeholder: prismic.KeyTextField;
+
+  /**
+   * Company Name Label field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.company_name_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_name_label: prismic.KeyTextField;
+
+  /**
+   * Company Name Placeholder field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.company_name_placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_name_placeholder: prismic.KeyTextField;
+
+  /**
+   * Website Field Label field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.website_field_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  website_field_label: prismic.KeyTextField;
+
+  /**
+   * Website Field Placeholder field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.website_field_placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  website_field_placeholder: prismic.KeyTextField;
+
+  /**
+   * Comment Field Label field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.comment_field_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  comment_field_label: prismic.KeyTextField;
+
+  /**
+   * Comment Field Placeholder field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.comment_field_placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  comment_field_placeholder: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for FormSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FormSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FormSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FormSection*
+ */
+type FormSectionSliceVariation = FormSectionSliceDefault;
+
+/**
+ * FormSection Shared Slice
+ *
+ * - **API ID**: `form_section`
+ * - **Description**: FormSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FormSectionSlice = prismic.SharedSlice<
+  "form_section",
+  FormSectionSliceVariation
 >;
 
 /**
@@ -926,6 +1193,15 @@ declare module "@prismicio/client" {
       BrandTrafficRiskSliceDefaultPrimary,
       BrandTrafficRiskSliceVariation,
       BrandTrafficRiskSliceDefault,
+      FaqSectionSlice,
+      FaqSectionSliceDefaultPrimaryItemsItem,
+      FaqSectionSliceDefaultPrimary,
+      FaqSectionSliceVariation,
+      FaqSectionSliceDefault,
+      FormSectionSlice,
+      FormSectionSliceDefaultPrimary,
+      FormSectionSliceVariation,
+      FormSectionSliceDefault,
       HeroSectionSlice,
       HeroSectionSliceDefaultPrimary,
       HeroSectionSliceVariation,

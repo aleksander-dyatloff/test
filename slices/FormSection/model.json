@@ -1,0 +1,118 @@
+{
+  "id": "form_section",
+  "type": "SharedSlice",
+  "name": "FormSection",
+  "description": "FormSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "send_action_text": {
+          "type": "Text",
+          "config": {
+            "label": "Send Action Text",
+            "placeholder": ""
+          }
+        },
+        "name_field_label": {
+          "type": "Text",
+          "config": {
+            "label": "Name Field Label",
+            "placeholder": ""
+          }
+        },
+        "name_field_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Name Field Placeholder",
+            "placeholder": ""
+          }
+        },
+        "email_field_label": {
+          "type": "Text",
+          "config": {
+            "label": "Email Field Label",
+            "placeholder": ""
+          }
+        },
+        "email_field_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Email Field Placeholder",
+            "placeholder": ""
+          }
+        },
+        "company_name_label": {
+          "type": "Text",
+          "config": {
+            "label": "Company Name Label",
+            "placeholder": ""
+          }
+        },
+        "company_name_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Company Name Placeholder",
+            "placeholder": ""
+          }
+        },
+        "website_field_label": {
+          "type": "Text",
+          "config": {
+            "label": "Website Field Label",
+            "placeholder": ""
+          }
+        },
+        "website_field_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Website Field Placeholder",
+            "placeholder": ""
+          }
+        },
+        "comment_field_label": {
+          "type": "Text",
+          "config": {
+            "label": "Comment Field Label",
+            "placeholder": ""
+          }
+        },
+        "comment_field_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Comment Field Placeholder",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
