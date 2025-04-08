@@ -1,0 +1,75 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "empty",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "was",
+				"type": "Text"
+			},
+			"action_text": {
+				"__TYPE__": "FieldContent",
+				"value": "form",
+				"type": "Text"
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"item_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "courage",
+									"type": "Text"
+								}
+							],
+							[
+								"item_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "closely",
+									"type": "Text"
+								}
+							],
+							[
+								"item_image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+										"width": 3958,
+										"height": 3958
+									},
+									"url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+									"width": 3958,
+									"height": 3958,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "closer",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

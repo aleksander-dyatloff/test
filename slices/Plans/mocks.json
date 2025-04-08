@@ -1,0 +1,80 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "bow",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "sent",
+				"type": "Text"
+			},
+			"action_text": {
+				"__TYPE__": "FieldContent",
+				"value": "refer",
+				"type": "Text"
+			},
+			"plans": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"plan_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pleasant",
+									"type": "Text"
+								}
+							],
+							[
+								"plan_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "mental",
+									"type": "Text"
+								}
+							],
+							[
+								"plan_price",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sint excepteur pariatur mollit proident occaecat exercitation nulla in voluptate fugiat ad officia. Excepteur id velit nulla esse qui sit."
+											}
+										}
+									]
+								}
+							],
+							[
+								"plan_action_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "guide",
+									"type": "Text"
+								}
+							],
+							[
+								"plan_benefits_list",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "introduced",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,64 @@
+{
+  "id": "advantages",
+  "type": "SharedSlice",
+  "name": "Advantages",
+  "description": "Advantages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "action_text": {
+          "type": "Text",
+          "config": {
+            "label": "Action Text",
+            "placeholder": ""
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "repeat": true,
+            "fields": {
+              "item_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Title",
+                  "placeholder": ""
+                }
+              },
+              "item_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "plans",
+  "type": "SharedSlice",
+  "name": "Plans",
+  "description": "Plans",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "action_text": {
+          "type": "Text",
+          "config": {
+            "label": "Action Text",
+            "placeholder": ""
+          }
+        },
+        "plans": {
+          "type": "Group",
+          "config": {
+            "label": "Plans",
+            "repeat": true,
+            "fields": {
+              "plan_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Title",
+                  "placeholder": ""
+                }
+              },
+              "plan_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Description",
+                  "placeholder": ""
+                }
+              },
+              "plan_price": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Plan Price",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "strong"
+                }
+              },
+              "plan_action_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Action Text",
+                  "placeholder": ""
+                }
+              },
+              "plan_benefits_list": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Benefits List",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

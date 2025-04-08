@@ -1,0 +1,84 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualNextFileLoader/dist/vanilla-extract-webpack-plugin-virtualNextFileLoader.cjs.js!./node_modules/@vanilla-extract/webpack-plugin/vanilla.virtual.css?%7B%22fileName%22%3A%22styles%2Ffonts.css.ts.vanilla.css%22%2C%22source%22%3A%22QGZvbnQtZmFjZSB7CiAgc3JjOiB1cmwoJy9mb250cy9PcGVuU2F1Y2VPbmUtUmVndWxhci50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC1kaXNwbGF5OiBzd2FwOwogIGZvbnQtZmFtaWx5OiBPcGVuU2F1Y2VPbmU7Cn0KQGZvbnQtZmFjZSB7CiAgc3JjOiB1cmwoJy9mb250cy9PcGVuU2F1Y2VPbmUtTGlnaHQudHRmJykgZm9ybWF0KCd0cnVldHlwZScpOwogIGZvbnQtd2VpZ2h0OiAzMDA7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtZGlzcGxheTogc3dhcDsKICBmb250LWZhbWlseTogT3BlblNhdWNlT25lOwp9CkBmb250LWZhY2UgewogIHNyYzogdXJsKCcvZm9udHMvT3BlblNhdWNlT25lLU1lZGl1bS50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC1kaXNwbGF5OiBzd2FwOwogIGZvbnQtZmFtaWx5OiBPcGVuU2F1Y2VPbmU7Cn0KQGZvbnQtZmFjZSB7CiAgc3JjOiB1cmwoJy9mb250cy9PcGVuU2F1Y2VPbmUtQm9sZC50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC1kaXNwbGF5OiBzd2FwOwogIGZvbnQtZmFtaWx5OiBPcGVuU2F1Y2VPbmU7Cn0KQGZvbnQtZmFjZSB7CiAgc3JjOiB1cmwoJy9mb250cy9OZXVlIFBsYWsgQm9sZC50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7CiAgZm9udC13ZWlnaHQ6IDgwMDsKICBmb250LXN0eWxlOiBub3JtYWw7CiAgZm9udC1kaXNwbGF5OiBzd2FwOwogIGZvbnQtZmFtaWx5OiBOZXVlIFBsYWs7Cn0%3D%22%7D ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+  src: url('/fonts/OpenSauceOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-family: OpenSauceOne;
+}
+@font-face {
+  src: url('/fonts/OpenSauceOne-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  font-family: OpenSauceOne;
+}
+@font-face {
+  src: url('/fonts/OpenSauceOne-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-family: OpenSauceOne;
+}
+@font-face {
+  src: url('/fonts/OpenSauceOne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-family: OpenSauceOne;
+}
+@font-face {
+  src: url('/fonts/Neue Plak Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-family: Neue Plak;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualNextFileLoader/dist/vanilla-extract-webpack-plugin-virtualNextFileLoader.cjs.js!./node_modules/@vanilla-extract/webpack-plugin/vanilla.virtual.css?%7B%22fileName%22%3A%22styles%2Ftheme.css.ts.vanilla.css%22%2C%22source%22%3A%22LnRoZW1lX3RoZW1lQ2xhc3NfX25ydHB2YzAgewogIC0tY29sb3JzLURhcmtfX25ydHB2YzE6IHJnYigxNSwgNywgMjkpOwogIC0tY29sb3JzLUJnX0NhcmQtNjBcJV9fbnJ0cHZjMjogcmdiYSgxNiwgMTYsIDE2LCAwLjYpOwogIC0tY29sb3JzLVdoaXRlX19ucnRwdmMzOiByZ2IoMjU1LCAyNTUsIDI1NSk7CiAgLS1jb2xvcnMtV2hpdGUtNjBcJV9fbnJ0cHZjNDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjYpOwogIC0tY29sb3JzLVN0cm9rZS0zMFwlX19ucnRwdmM1OiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMyk7CiAgLS1jb2xvcnMtV2hpdGUtMTBcJV9fbnJ0cHZjNjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpOwogIC0tY29sb3JzLXByaW1hcnktR3JlZW4tMTAwX19ucnRwdmM3OiByZ2IoMTg5LCAyMjcsIDY5KTsKICAtLWNvbG9ycy1wcmltYXJ5LUdyZWVuLTIwMF9fbnJ0cHZjODogcmdiKDE0OCwgMTg1LCAzMSk7CiAgLS1jb2xvcnMtc2Vjb25kYXJ5LVB1cnBsZV9fbnJ0cHZjOTogcmdiKDEzOCwgMTUwLCAyNTQpOwogIC0tY29sb3JzLXNlY29uZGFyeS1QaW5rX19ucnRwdmNhOiByZ2IoMTkwLCAxMTIsIDI1Mik7CiAgLS1jb2xvcnMtc2Vjb25kYXJ5LUJsdWVfX25ydHB2Y2I6IHJnYigwLCAyNiwgMjU1KTsKICAtLWNvbG9ycy1ncmFkaWVudC1XaGl0ZV9HcmFkaWVudF9fbnJ0cHZjYzogbGluZWFyLWdyYWRpZW50KDE0NC45ZGVnLCAjRkZGRkZGIDE1LjUyJSwgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjMpIDczLjMzJSk7CiAgLS1jb2xvcnMtZ3JhZGllbnQtQmdfQ2FyZF9QcmljaW5nX19ucnRwdmNkOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjM0MyMTUyIDIwLjkxJSwgcmdiYSgxNiwgMTYsIDE2LCAwLjYpIDc0LjYzJSk7CiAgLS1jb2xvcnMtZ3JhZGllbnQtQmdfQmxvY2tfUHJpY2luZ19fbnJ0cHZjZTogbGluZWFyLWdyYWRpZW50KDE4MGRlZywgcmdiYSgzNiwgMTgsIDU0LCAwLjkpIDAlLCByZ2JhKDM2LCAxOCwgNTQsIDApIDEwMCUpOwp9%22%7D ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.theme_themeClass__nrtpvc0 {
+  --colors-Dark__nrtpvc1: rgb(15, 7, 29);
+  --colors-Bg_Card-60\%__nrtpvc2: rgba(16, 16, 16, 0.6);
+  --colors-White__nrtpvc3: rgb(255, 255, 255);
+  --colors-White-60\%__nrtpvc4: rgba(255, 255, 255, 0.6);
+  --colors-Stroke-30\%__nrtpvc5: rgba(255, 255, 255, 0.3);
+  --colors-White-10\%__nrtpvc6: rgba(255, 255, 255, 0.1);
+  --colors-primary-Green-100__nrtpvc7: rgb(189, 227, 69);
+  --colors-primary-Green-200__nrtpvc8: rgb(148, 185, 31);
+  --colors-secondary-Purple__nrtpvc9: rgb(138, 150, 254);
+  --colors-secondary-Pink__nrtpvca: rgb(190, 112, 252);
+  --colors-secondary-Blue__nrtpvcb: rgb(0, 26, 255);
+  --colors-gradient-White_Gradient__nrtpvcc: linear-gradient(144.9deg, #FFFFFF 15.52%, rgba(255, 255, 255, 0.3) 73.33%);
+  --colors-gradient-Bg_Card_Pricing__nrtpvcd: linear-gradient(180deg, #3C2152 20.91%, rgba(16, 16, 16, 0.6) 74.63%);
+  --colors-gradient-Bg_Block_Pricing__nrtpvce: linear-gradient(180deg, rgba(36, 18, 54, 0.9) 0%, rgba(36, 18, 54, 0) 100%);
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualNextFileLoader/dist/vanilla-extract-webpack-plugin-virtualNextFileLoader.cjs.js!./node_modules/@vanilla-extract/webpack-plugin/vanilla.virtual.css?%7B%22fileName%22%3A%22styles%2Findex.css.ts.vanilla.css%22%2C%22source%22%3A%22KiB7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICB1c2VyLXNlbGVjdDogbm9uZTsKfQpodG1sLCBib2R5IHsKICBmb250LWZhbWlseTogT3BlblNhdWNlT25lOwogIG1hcmdpbjogMDsKICBwYWRkaW5nOiAwOwogIGZvbnQtc2l6ZTogMTZweDsKICBsaW5lLWhlaWdodDogMS41OwogIG1pbi1oZWlnaHQ6IDEwMHZoOwogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICB3aWR0aDogMTAwdnc7CiAgb3ZlcmZsb3cteDogaGlkZGVuOwogIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNvbG9ycy1EYXJrX19ucnRwdmMxKTsKICBjb2xvcjogdmFyKC0tY29sb3JzLVdoaXRlX19ucnRwdmMzKTsKfQpib2R5IHsKICBwYWRkaW5nLXRvcDogNzBweDsKICBwb3NpdGlvbjogcmVsYXRpdmU7Cn0%3D%22%7D ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+html, body {
+  font-family: OpenSauceOne;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--colors-Dark__nrtpvc1);
+  color: var(--colors-White__nrtpvc3);
+}
+body {
+  padding-top: 70px;
+  position: relative;
+}

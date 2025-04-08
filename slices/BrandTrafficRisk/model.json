@@ -1,0 +1,71 @@
+{
+  "id": "brand_traffic_risk",
+  "type": "SharedSlice",
+  "name": "BrandTrafficRisk",
+  "description": "BrandTrafficRisk",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "action_text": {
+          "type": "Text",
+          "config": {
+            "label": "Action Text",
+            "placeholder": ""
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "repeat": true,
+            "fields": {
+              "item_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Title",
+                  "placeholder": ""
+                }
+              },
+              "item_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Description",
+                  "placeholder": ""
+                }
+              },
+              "item_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Item Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

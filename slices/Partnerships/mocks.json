@@ -1,0 +1,77 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "middle",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint deserunt enim id duis do exercitation sit id exercitation id sunt nisi voluptate commodo cillum."
+						}
+					}
+				]
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"item_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "better",
+									"type": "Text"
+								}
+							],
+							[
+								"item_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "combination",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "mud",
+									"type": "Text"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "anyway",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

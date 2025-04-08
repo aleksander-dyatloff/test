@@ -1,0 +1,81 @@
+{
+  "id": "partnerships",
+  "type": "SharedSlice",
+  "name": "Partnerships",
+  "description": "Partnerships",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "em"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "repeat": true,
+            "fields": {
+              "item_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Title",
+                  "placeholder": ""
+                }
+              },
+              "item_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "repeat": true,
+            "fields": {
+              "card_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Title",
+                  "placeholder": ""
+                }
+              },
+              "card_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
