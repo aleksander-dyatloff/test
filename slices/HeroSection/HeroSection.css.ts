@@ -83,6 +83,18 @@ export const imageWrapperDescription = style([
   typography["Body/M medium"],
   {
     display: "none",
+    maskImage: "paint(squircle)",
+
+    vars: {
+      "--squircle-smooth": "1",
+      "--squircle-radius": "40px",
+    },
+
+    selectors: {
+      "body[data-no-worklet] &": {
+        borderRadius: 40,
+      },
+    },
 
     "@media": {
       [breakpoints.desktop]: {
@@ -94,7 +106,6 @@ export const imageWrapperDescription = style([
         padding: 32,
         backdropFilter: "blur(40px)",
         backgroundColor: theme.colors["Bg Card-60%"],
-        borderRadius: 40,
       },
     },
   },

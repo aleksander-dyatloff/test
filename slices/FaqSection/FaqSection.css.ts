@@ -54,6 +54,7 @@ export const description = style([
   typography["Body/S regular"],
   {
     margin: 0,
+    color: theme.colors["White-60%"],
   },
 ]);
 
@@ -71,15 +72,34 @@ export const items = style({
 });
 
 export const accordion = style({
+  border: "none",
+  textAlign: "left",
+  color: "inherit",
+  font: "inherit",
   cursor: "pointer",
-  minHeight: 90,
-  borderRadius: 24,
   backgroundColor: theme.colors["Bg Card-60%"],
   backdropFilter: "blur(40px)",
   display: "flex",
   alignItems: "center",
   gap: 24,
   padding: "18px 24px",
+  transitionProperty: "transform",
+  transitionDuration: "300ms",
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "24px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 24,
+    },
+    "&:active": {
+      transform: "scale(1.05)",
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
@@ -116,6 +136,7 @@ export const accordionInfo = style({
 export const accordionHeader = style([
   typography["H4-H5"],
   {
+    margin: 0,
     display: "flex",
     alignItems: "center",
   },

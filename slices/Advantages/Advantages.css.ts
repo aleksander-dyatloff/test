@@ -47,13 +47,20 @@ export const title = style([
 
 export const preview = style({
   maxWidth: "100%",
-  borderRadius: 40,
   backgroundColor: theme.colors["Bg Card-60%"],
   backdropFilter: "blur(40px)",
   padding: 32,
+  maskImage: "paint(squircle)",
 
-  "@media": {
-    [breakpoints.desktop]: {},
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "40px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 40,
+    },
   },
 });
 

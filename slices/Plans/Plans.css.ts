@@ -10,15 +10,35 @@ export const wrapper = style({
   flexDirection: "column",
   background:
     "linear-gradient(180deg, rgba(36, 18, 54, 0.9) 0%, rgba(36, 18, 54, 0) 100%)",
-  borderTopLeftRadius: 48,
-  borderTopRightRadius: 48,
   borderBottom: `1px solid ${theme.colors["Stroke-30%"]}`,
   zIndex: 1,
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "48px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderTopLeftRadius: 48,
+      borderTopRightRadius: 48,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
-      borderTopLeftRadius: 64,
-      borderTopRightRadius: 64,
+      vars: {
+        "--squircle-smooth": "1",
+        "--squircle-radius": "64px",
+      },
+
+      selectors: {
+        "body[data-no-worklet] &": {
+          borderTopLeftRadius: 64,
+          borderTopRightRadius: 64,
+        },
+      },
     },
   },
 });
@@ -98,7 +118,8 @@ export const items = style({
 });
 
 export const item = style({
-  borderRadius: 40,
+  position: "relative",
+  overflow: "hidden",
   backgroundColor: theme.colors["Bg Card-60%"],
   flex: "1 1",
   minWidth: 343,
@@ -106,6 +127,18 @@ export const item = style({
   flexDirection: "column",
   padding: "32px 24px",
   scrollSnapAlign: "center",
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "40px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 40,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
@@ -121,6 +154,8 @@ export const itemActive = style({
 });
 
 export const itemHeader = style({
+  position: "relative",
+  zIndex: 1,
   display: "flex",
   gap: 16,
   alignItems: "center",
@@ -138,6 +173,8 @@ export const itemTitle = style([
 export const itemDescription = style([
   typography.H5,
   {
+    position: "relative",
+    zIndex: 1,
     margin: 0,
     marginBottom: 24,
   },
@@ -164,6 +201,8 @@ export const itemAction = style({
 export const itemBenefits = style([
   typography["Body/M regular"],
   {
+    position: "relative",
+    zIndex: 1,
     margin: 0,
     paddingLeft: 20,
     display: "flex",

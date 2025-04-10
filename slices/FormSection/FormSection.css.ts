@@ -9,17 +9,39 @@ export const wrapper = style({
     "linear-gradient(180deg, rgba(36, 18, 54, 0.9) 0%, rgba(36, 18, 54, 0) 100%)",
   borderBottom: `1px solid ${theme.colors["Stroke-30%"]}`,
   zIndex: 1,
-  borderTopLeftRadius: 48,
-  borderTopRightRadius: 48,
   paddingTop: 56,
   paddingBottom: 56,
+
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "48px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderTopLeftRadius: 48,
+      borderTopRightRadius: 48,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
       paddingTop: 124,
       paddingBottom: 124,
-      borderTopLeftRadius: 64,
-      borderTopRightRadius: 64,
+
+      vars: {
+        "--squircle-smooth": "1",
+        "--squircle-radius": "64px",
+      },
+
+      selectors: {
+        "body[data-no-worklet] &": {
+          borderTopLeftRadius: 64,
+          borderTopRightRadius: 64,
+        },
+      },
     },
   },
 });

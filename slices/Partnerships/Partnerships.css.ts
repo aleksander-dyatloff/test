@@ -134,10 +134,21 @@ export const cards = style({
 });
 
 export const card = style({
-  borderRadius: 40,
   backgroundColor: theme.colors["Bg Card-60%"],
   backdropFilter: "blur(40px)",
   padding: 24,
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "40px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 40,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {

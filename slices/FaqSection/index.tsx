@@ -31,7 +31,7 @@ const FaqSection: FC<FaqSectionProps> = ({ slice }) => {
         </div>
         <div className={styles.items}>
           {slice.primary.items.map((item) => (
-            <section
+            <button
               key={item.item_title}
               className={classNames(styles.accordion, {
                 [styles.accordionActive]: item.item_title === activeItem,
@@ -51,7 +51,7 @@ const FaqSection: FC<FaqSectionProps> = ({ slice }) => {
               <div className={styles.accordionIndicator}>
                 <ArrowIcon />
               </div>
-            </section>
+            </button>
           ))}
         </div>
       </Container>

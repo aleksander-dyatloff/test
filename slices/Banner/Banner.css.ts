@@ -9,15 +9,36 @@ export const root = style({
   background:
     "linear-gradient(153.75deg, #3C2152 30.52%, rgba(16, 16, 16, 0.6) 104.68%)",
   overflow: "hidden",
-  borderRadius: 40,
   padding: "48px 16px",
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "40px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 40,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
+      vars: {
+        "--squircle-smooth": "1",
+        "--squircle-radius": "56px",
+      },
+
       minHeight: 460,
-      borderRadius: 56,
       paddingTop: 100,
       paddingBottom: 80,
+
+      selectors: {
+        "body[data-no-worklet] &": {
+          borderRadius: 56,
+        },
+      },
     },
   },
 });

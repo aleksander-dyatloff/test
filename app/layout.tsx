@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/index.css";
 import { themeClass } from "@/styles/theme.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={themeClass}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          id="squircle-houdini"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('paintWorklet' in CSS) {
+                CSS.paintWorklet.addModule('https://www.unpkg.com/css-houdini-squircle/squircle.min.js');
+              } else {
+                document.body.setAttribute('data-no-worklet', '');
+              }
+            `,
+          }}
+        />
+      </body>
     </html>
   );
 }

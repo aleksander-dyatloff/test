@@ -6,6 +6,8 @@ import Container from "@/components/Container/Container";
 import * as styles from "./Plans.css";
 import Button from "@/components/Button/Button";
 import classNames from "classnames";
+import BackgroundImage from "./Bg.png";
+import Image from "next/image";
 
 /**
  * Props for `Plans`.
@@ -66,6 +68,9 @@ const Plans: FC<PlansProps> = ({ slice }) => {
                   index % 2 !== 0 && styles.itemActive
                 )}
               >
+                {index % 2 !== 0 && (
+                  <Image fill src={BackgroundImage.src} alt="bg" />
+                )}
                 <header className={styles.itemHeader}>
                   <h4 className={styles.itemTitle}>{plan.plan_title}</h4>
                   <div className={styles.itemPrice}>

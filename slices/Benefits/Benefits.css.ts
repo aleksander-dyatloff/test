@@ -84,9 +84,20 @@ export const item = style({
   alignItems: "center",
   textAlign: "center",
   backgroundColor: theme.colors["Bg Card-60%"],
-  borderRadius: 40,
   padding: 24,
   backdropFilter: "blur(40px)",
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "40px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 40,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {

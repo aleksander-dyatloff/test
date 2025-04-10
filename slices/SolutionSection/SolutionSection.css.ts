@@ -42,7 +42,6 @@ export const items = style({
 });
 
 export const item = style({
-  borderRadius: 40,
   backdropFilter: "blur(40px)",
   backgroundColor: theme.colors["Bg Card-60%"],
   padding: 24,
@@ -50,6 +49,18 @@ export const item = style({
   display: "flex",
   minHeight: 132,
   gap: 16,
+  maskImage: "paint(squircle)",
+
+  vars: {
+    "--squircle-smooth": "1",
+    "--squircle-radius": "40px",
+  },
+
+  selectors: {
+    "body[data-no-worklet] &": {
+      borderRadius: 40,
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
