@@ -61,7 +61,9 @@ const FormSection: FC<FormSectionProps> = ({ slice }) => {
               label={slice.primary.comment_field_label ?? ""}
               placeholder={slice.primary.comment_field_placeholder ?? ""}
             />
-            <Button>{slice.primary.send_action_text}</Button>
+            <Button className={styles.action}>
+              {slice.primary.send_action_text}
+            </Button>
           </div>
         </div>
       </Container>

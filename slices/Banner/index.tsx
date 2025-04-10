@@ -6,6 +6,7 @@ import * as styles from "./Banner.css";
 import Button from "@/components/Button/Button";
 import Image from "next/image";
 import BGImage from "./Bg.png";
+import BGMobileImage from "./Mobile-Bg.png";
 
 /**
  * Props for `Banner`.
@@ -28,7 +29,13 @@ const Banner: FC<BannerProps> = ({ slice }) => {
             <p className={styles.description}>{slice.primary.description}</p>
             <Button>{slice.primary.action_text}</Button>
           </div>
-          <Image src={BGImage.src} layout="fill" alt="bg" />
+          <div className={styles.desktopImage}>
+            <Image src={BGImage.src} alt="bg" fill />
+          </div>
+
+          <div className={styles.mobileImage}>
+            <Image src={BGMobileImage.src} alt="mobile bg" fill />
+          </div>
         </div>
       </Container>
     </section>

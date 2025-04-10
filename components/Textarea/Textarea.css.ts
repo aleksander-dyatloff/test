@@ -10,7 +10,7 @@ export const root = style({
 });
 
 export const label = style([
-  typography["Body/M regular"],
+  typography["Body/M regular-Body/S regular"],
   {
     color: theme.colors["White-60%"],
     opacity: 0.7,
@@ -18,7 +18,7 @@ export const label = style([
 ]);
 
 export const input = style([
-  typography["Body/M regular"],
+  typography["Body/M regular-Body/S regular"],
   {
     backgroundColor: theme.colors["Bg Card-60%"],
     border: "none",
@@ -28,7 +28,7 @@ export const input = style([
     width: "100%",
     display: "block",
     outline: "none",
-    font: "inherit",
+    fontFamily: "inherit",
     transitionProperty: "box-shadow, color",
     transitionDuration: "300ms",
     color: theme.colors["White-60%"],

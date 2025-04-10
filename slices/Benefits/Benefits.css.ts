@@ -47,7 +47,7 @@ export const description = style([
 ]);
 
 export const title = style([
-  typography.H2,
+  typography["H2-H3"],
   {
     textAlign: "center",
     margin: 0,
@@ -96,7 +96,7 @@ export const item = style({
 });
 
 export const itemTitle = style([
-  typography.H4,
+  typography["H4-H5"],
   {
     margin: 0,
     marginBottom: 8,
@@ -104,7 +104,7 @@ export const itemTitle = style([
 ]);
 
 export const itemDescription = style([
-  typography["Body/M regular"],
+  typography["Body/M regular-Body/S regular"],
   {
     margin: 0,
     color: theme.colors["White-60%"],

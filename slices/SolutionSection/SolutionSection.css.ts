@@ -88,14 +88,14 @@ export const itemContent = style({
 });
 
 export const itemTitle = style([
-  typography.H4,
+  typography["H4-H5"],
   {
     margin: 0,
   },
 ]);
 
 export const itemDescription = style([
-  typography["Body/M regular"],
+  typography["Body/M regular-Body/S regular"],
   {
     margin: 0,
     color: theme.colors["White-60%"],
@@ -103,7 +103,7 @@ export const itemDescription = style([
 ]);
 
 export const title = style([
-  typography.H2,
+  typography["H2-H3"],
   {
     margin: 0,
     marginBottom: 16,
@@ -121,7 +121,13 @@ export const description = style([
   {
     margin: 0,
     color: theme.colors["White-60%"],
-    marginBottom: 48,
+    marginBottom: 32,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 48,
+      },
+    },
   },
 ]);
 

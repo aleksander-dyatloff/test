@@ -1,3 +1,4 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style } from "@vanilla-extract/css";
@@ -7,11 +8,18 @@ export const root = style({
   zIndex: 1,
   background:
     "linear-gradient(153.75deg, #3C2152 30.52%, rgba(16, 16, 16, 0.6) 104.68%)",
-  borderRadius: 56,
-  minHeight: 460,
-  paddingTop: 100,
-  paddingBottom: 80,
   overflow: "hidden",
+  borderRadius: 40,
+  padding: "48px 16px",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      minHeight: 460,
+      borderRadius: 56,
+      paddingTop: 100,
+      paddingBottom: 80,
+    },
+  },
 });
 
 export const content = style({
@@ -24,20 +32,65 @@ export const content = style({
 });
 
 export const title = style([
-  typography.H2,
+  typography["H2-H3"],
   {
     maxWidth: 680,
     margin: 0,
-    marginBottom: 24,
+    marginBottom: 16,
+    background: "linear-gradient(122.04deg, #FFFFFF 16.8%, #2F1F8F 128.39%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 24,
+      },
+    },
   },
 ]);
 
 export const description = style([
-  typography["Body/M medium"],
+  typography["Body/M regular-Body/S regular"],
   {
     color: theme.colors["White-60%"],
     maxWidth: 680,
     margin: 0,
-    marginBottom: 48,
+    marginBottom: 32,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 48,
+      },
+    },
   },
 ]);
+
+export const mobileImage = style({
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "none",
+    },
+  },
+});
+
+export const desktopImage = style({
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  display: "none",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "block",
+    },
+  },
+});

@@ -62,23 +62,37 @@ export const description = style([
   },
 ]);
 
-export const items = style({
-  display: "flex",
-  gap: 24,
-  overflowX: "auto",
-  scrollSnapType: "x mandatory",
+export const itemsWrapper = style({
+  overflow: "hidden",
   marginLeft: "calc((100vw - 343px) / -2)",
   marginRight: "calc((100vw - 343px) / -2)",
-  paddingLeft: 16,
-  paddingRight: 16,
+  height: 632,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      overflow: "auto",
+      marginLeft: 0,
+      marginRight: 0,
+      height: "auto",
+    },
+  },
+});
+
+export const items = style({
+  display: "flex",
+  gap: 8,
+  overflowX: "auto",
+  scrollSnapType: "x mandatory",
+  paddingLeft: "calc((100vw - 343px) / 2)",
+  paddingRight: "calc((100vw - 343px) / 2)",
+  paddingBottom: 16,
 
   "@media": {
     [breakpoints.desktop]: {
       alignItems: "center",
-      marginLeft: 0,
-      marginRight: 0,
       paddingLeft: 0,
       paddingRight: 0,
+      gap: 24,
     },
   },
 });
@@ -154,9 +168,15 @@ export const itemBenefits = style([
     paddingLeft: 20,
     display: "flex",
     flexDirection: "column",
-    gap: 16,
+    gap: 8,
     color: theme.colors["White-60%"],
     marginBottom: 32,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        gap: 16,
+      },
+    },
   },
 ]);
 
@@ -171,4 +191,32 @@ export const footer = style({
       paddingBottom: 124,
     },
   },
+});
+
+export const sliderDots = style({
+  paddingTop: 16,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 8,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "none",
+    },
+  },
+});
+
+export const sliderDot = style({
+  height: 8,
+  borderRadius: 8,
+  width: 16,
+  backgroundColor: theme.colors["White-10%"],
+  transitionProperty: "width, background-color",
+  transitionDuration: "200ms",
+});
+
+export const sliderDotActive = style({
+  width: 32,
+  backgroundColor: theme.colors.White,
 });

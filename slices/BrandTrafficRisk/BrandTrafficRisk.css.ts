@@ -111,7 +111,7 @@ export const itemImage = style({
 });
 
 export const itemTitle = style([
-  typography.H4,
+  typography["H4-H5"],
   {
     margin: 0,
     marginBottom: 8,

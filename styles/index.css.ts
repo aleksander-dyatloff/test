@@ -6,6 +6,7 @@ import { theme } from "./theme.css";
 globalStyle("*", {
   boxSizing: "border-box",
   userSelect: "none",
+  WebkitTapHighlightColor: "transparent",
 });
 
 globalStyle("html, body", {

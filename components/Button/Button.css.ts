@@ -6,7 +6,7 @@ import { style, styleVariants } from "@vanilla-extract/css";
 export const root = style({
   border: "none",
   backgroundColor: "transparent",
-  padding: "6px 16px",
+  padding: "6px 24px",
   minHeight: 48,
   borderRadius: 100,
   display: "flex",

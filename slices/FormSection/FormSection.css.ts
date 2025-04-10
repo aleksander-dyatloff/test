@@ -1,22 +1,39 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style } from "@vanilla-extract/css";
 
 export const wrapper = style({
-  paddingTop: 124,
-  paddingBottom: 124,
   position: "relative",
   background:
     "linear-gradient(180deg, rgba(36, 18, 54, 0.9) 0%, rgba(36, 18, 54, 0) 100%)",
-  borderTopLeftRadius: 64,
-  borderTopRightRadius: 64,
   borderBottom: `1px solid ${theme.colors["Stroke-30%"]}`,
   zIndex: 1,
+  borderTopLeftRadius: 48,
+  borderTopRightRadius: 48,
+  paddingTop: 56,
+  paddingBottom: 56,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      paddingTop: 124,
+      paddingBottom: 124,
+      borderTopLeftRadius: 64,
+      borderTopRightRadius: 64,
+    },
+  },
 });
 
 export const root = style({
   display: "flex",
+  flexDirection: "column",
   alignItems: "flex-start",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flexDirection: "row",
+    },
+  },
 });
 
 export const content = style({
@@ -25,35 +42,61 @@ export const content = style({
 });
 
 export const form = style({
-  flex: "0 0 50%",
   display: "flex",
   flexWrap: "wrap",
-  gap: 24,
-  marginLeft: "auto",
+  gap: 8,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      marginLeft: "auto",
+      flex: "0 0 50%",
+      gap: 24,
+    },
+  },
 });
 
 export const field = style({
-  flex: "1 1 45%",
+  flex: "1 1 100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  gap: 48,
+  gap: 32,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flex: "1 1 45%",
+      gap: 48,
+    },
+  },
 });
 
 export const title = style([
-  typography.H2,
+  typography["H2-H3"],
   {
     margin: 0,
-    marginBottom: 24,
-    maxWidth: 430,
+    marginBottom: 16,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 24,
+        maxWidth: 430,
+      },
+    },
   },
 ]);
 
 export const description = style([
-  typography["Body/M regular"],
+  typography["Body/M regular-Body/S regular"],
   {
     margin: 0,
-    maxWidth: 320,
+    color: theme.colors["White-60%"],
+    marginBottom: 32,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        maxWidth: 320,
+      },
+    },
   },
 ]);
 
@@ -61,4 +104,21 @@ export const preview = style({
   position: "absolute",
   bottom: 0,
   left: 0,
+  display: "none",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "block",
+    },
+  },
+});
+
+export const action = style({
+  width: "100%",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      width: "max-content",
+    },
+  },
 });

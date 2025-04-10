@@ -1,29 +1,52 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style } from "@vanilla-extract/css";
 
 export const root = style({
   position: "relative",
+  flexDirection: "column",
   display: "flex",
   justifyContent: "space-between",
-  gap: 145,
-  paddingTop: 120,
-  paddingBottom: 120,
   zIndex: 1,
+  paddingTop: 56,
+  paddingBottom: 56,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flexDirection: "row",
+      gap: 145,
+      paddingTop: 120,
+      paddingBottom: 120,
+    },
+  },
 });
 
 export const content = style({
   display: "flex",
   flexDirection: "column",
-  maxWidth: 435,
-  marginRight: "auto",
+  marginBottom: 32,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      marginBottom: 0,
+      maxWidth: 435,
+      marginRight: "auto",
+    },
+  },
 });
 
 export const title = style([
-  typography.H2,
+  typography["H2-H3"],
   {
     margin: 0,
-    marginBottom: 24,
+    marginBottom: 16,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 24,
+      },
+    },
   },
 ]);
 
@@ -35,22 +58,34 @@ export const description = style([
 ]);
 
 export const items = style({
-  width: "50%",
   display: "flex",
   flexDirection: "column",
-  gap: 16,
+  gap: 8,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      width: "50%",
+      gap: 16,
+    },
+  },
 });
 
 export const accordion = style({
   cursor: "pointer",
   minHeight: 90,
   borderRadius: 24,
-  padding: 32,
   backgroundColor: theme.colors["Bg Card-60%"],
   backdropFilter: "blur(40px)",
   display: "flex",
   alignItems: "center",
   gap: 24,
+  padding: "18px 24px",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      padding: 32,
+    },
+  },
 });
 
 export const accordionActive = style({});
@@ -79,7 +114,7 @@ export const accordionInfo = style({
 });
 
 export const accordionHeader = style([
-  typography.H4,
+  typography["H4-H5"],
   {
     display: "flex",
     alignItems: "center",
@@ -87,10 +122,16 @@ export const accordionHeader = style([
 ]);
 
 export const accordionContent = style([
-  typography["Body/M regular"],
+  typography["Body/M regular-Body/S regular"],
   {
     margin: 0,
-    marginTop: 16,
+    marginTop: 8,
     color: theme.colors["White-60%"],
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginTop: 16,
+      },
+    },
   },
 ]);
