@@ -27,21 +27,27 @@ const BrandTrafficRisk: FC<BrandTrafficRiskProps> = ({ slice }) => {
             <h2 className={styles.title}>{slice.primary.title}</h2>
             <p className={styles.description}>{slice.primary.description}</p>
           </div>
-          <Button variant="outline">{slice.primary.action_text}</Button>
+          <Button className={styles.desktopAction} variant="outline">
+            {slice.primary.action_text}
+          </Button>
         </div>
         <div className={styles.items}>
           {slice.primary.items.map((item) => (
             <div key={item.item_title} className={styles.item}>
-              <PrismicNextImage
-                className={styles.itemImage}
-                width={245}
-                field={item.item_image}
-              />
+              <div className={styles.itemImage}>
+                <PrismicNextImage
+                  style={{ width: "100%", height: "auto" }}
+                  field={item.item_image}
+                />
+              </div>
               <h4 className={styles.itemTitle}>{item.item_title}</h4>
               <p className={styles.itemDescription}>{item.item_description}</p>
             </div>
           ))}
         </div>
+        <Button className={styles.mobileAction} variant="outline">
+          {slice.primary.action_text}
+        </Button>
       </Container>
     </section>
   );

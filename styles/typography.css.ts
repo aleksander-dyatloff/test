@@ -1,9 +1,10 @@
 import { styleVariants } from "@vanilla-extract/css";
 import { secondaryFontName } from "./fonts.css";
+import breakpoints from "./breakpoints";
 
 export const typography = styleVariants({
   H1: {
-    fontSize: 90,
+    fontSize: 48,
     lineHeight: "100%",
     fontWeight: 800,
     letterSpacing: "0px",
@@ -14,12 +15,18 @@ export const typography = styleVariants({
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     textFillColor: "transparent",
+
+    "@media": {
+      [breakpoints.desktop]: {
+        fontSize: 90,
+      },
+    },
   },
   H2: {
-    fontFamily: secondaryFontName,
-    fontSize: 56,
-    lineHeight: "110%",
+    fontSize: 32,
+    lineHeight: "100%",
     fontWeight: 400,
+    fontFamily: secondaryFontName,
     letterSpacing: "0px",
 
     background:
@@ -28,12 +35,26 @@ export const typography = styleVariants({
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     textFillColor: "transparent",
+
+    "@media": {
+      [breakpoints.desktop]: {
+        fontSize: 56,
+        lineHeight: "110%",
+      },
+    },
   },
   H3: {
-    fontSize: 32,
-    lineHeight: "130%",
+    fontSize: 24,
+    lineHeight: "100%",
     fontWeight: 600,
     letterSpacing: "0px",
+
+    "@media": {
+      [breakpoints.desktop]: {
+        fontSize: 32,
+        lineHeight: "130%",
+      },
+    },
   },
   H4: {
     fontSize: 24,

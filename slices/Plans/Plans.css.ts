@@ -1,3 +1,4 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { globalStyle, style } from "@vanilla-extract/css";
@@ -9,10 +10,17 @@ export const wrapper = style({
   flexDirection: "column",
   background:
     "linear-gradient(180deg, rgba(36, 18, 54, 0.9) 0%, rgba(36, 18, 54, 0) 100%)",
-  borderTopLeftRadius: 64,
-  borderTopRightRadius: 64,
+  borderTopLeftRadius: 48,
+  borderTopRightRadius: 48,
   borderBottom: `1px solid ${theme.colors["Stroke-30%"]}`,
   zIndex: 1,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      borderTopLeftRadius: 64,
+      borderTopRightRadius: 64,
+    },
+  },
 });
 
 export const root = style({
@@ -25,9 +33,17 @@ export const header = style({
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
-  gap: 24,
-  paddingTop: 124,
-  paddingBottom: 48,
+  paddingTop: 56,
+  paddingBottom: 32,
+  gap: 16,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      paddingTop: 124,
+      paddingBottom: 48,
+      gap: 24,
+    },
+  },
 });
 
 export const title = style([
@@ -49,17 +65,40 @@ export const description = style([
 export const items = style({
   display: "flex",
   gap: 24,
-  alignItems: "center",
+  overflowX: "auto",
+  scrollSnapType: "x mandatory",
+  marginLeft: "calc((100vw - 343px) / -2)",
+  marginRight: "calc((100vw - 343px) / -2)",
+  paddingLeft: 16,
+  paddingRight: 16,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      alignItems: "center",
+      marginLeft: 0,
+      marginRight: 0,
+      paddingLeft: 0,
+      paddingRight: 0,
+    },
+  },
 });
 
 export const item = style({
   borderRadius: 40,
   backgroundColor: theme.colors["Bg Card-60%"],
   flex: "1 1",
-  padding: "48px 40px",
-  minHeight: 590,
+  minWidth: 343,
   display: "flex",
   flexDirection: "column",
+  padding: "32px 24px",
+  scrollSnapAlign: "center",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      padding: "48px 40px",
+      minHeight: 590,
+    },
+  },
 });
 
 export const itemActive = style({
@@ -99,6 +138,10 @@ globalStyle(`${itemPrice} strong`, {
   color: theme.colors.White,
 });
 
+globalStyle(`${itemPrice} *`, {
+  margin: 0,
+});
+
 export const itemAction = style({
   marginTop: "auto",
   width: "100%",
@@ -121,5 +164,11 @@ export const footer = style({
   paddingTop: 24,
   display: "flex",
   justifyContent: "center",
-  paddingBottom: 124,
+  paddingBottom: 56,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      paddingBottom: 124,
+    },
+  },
 });

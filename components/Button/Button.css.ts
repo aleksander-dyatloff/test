@@ -1,3 +1,4 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style, styleVariants } from "@vanilla-extract/css";
@@ -5,8 +6,8 @@ import { style, styleVariants } from "@vanilla-extract/css";
 export const root = style({
   border: "none",
   backgroundColor: "transparent",
-  padding: "12px 24px",
-  minHeight: 56,
+  padding: "6px 16px",
+  minHeight: 48,
   borderRadius: 100,
   display: "flex",
   alignItems: "center",
@@ -19,6 +20,13 @@ export const root = style({
   transitionProperty: "background-color, color, box-shadow, border-color",
   transitionDuration: "0.2s",
   whiteSpace: "nowrap",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      minHeight: 56,
+      padding: "12px 24px",
+    },
+  },
 });
 
 export const variant = styleVariants({
@@ -57,6 +65,7 @@ export const variant = styleVariants({
     backgroundColor: "transparent",
     color: theme.colors.White,
     padding: 0,
+    minWidth: "auto",
 
     selectors: {
       [`&:hover, &:focus`]: {

@@ -1,3 +1,4 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { globalStyle, style } from "@vanilla-extract/css";
@@ -8,9 +9,16 @@ export const root = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingTop: 120,
-  paddingBottom: 120,
+  paddingTop: 56,
+  paddingBottom: 56,
   zIndex: 1,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      paddingTop: 120,
+      paddingBottom: 120,
+    },
+  },
 });
 
 export const header = style({

@@ -1,3 +1,5 @@
+import breakpoints from "@/styles/breakpoints";
+import { theme } from "@/styles/theme.css";
 import { style } from "@vanilla-extract/css";
 
 export const root = style({
@@ -16,9 +18,15 @@ export const container = style({
 });
 
 export const middle = style({
-  display: "flex",
+  display: "none",
   justifyContent: "center",
   flex: "1 1",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "flex",
+    },
+  },
 });
 
 export const end = style({
@@ -27,7 +35,35 @@ export const end = style({
   flex: "1 1",
 });
 
+export const logoWrapper = style({
+  flex: "1 1",
+});
+
 export const logo = style({
   display: "flex",
-  flex: "1 1",
+  width: 150,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      width: 170,
+    },
+  },
+});
+
+export const mobileMenuButton = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "none",
+  backgroundColor: "transparent",
+  color: theme.colors.White,
+  fontSize: 16,
+  padding: 8,
+  marginRight: 8,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "none",
+    },
+  },
 });

@@ -1,9 +1,14 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style } from "@vanilla-extract/css";
 
 export const wrapper = style({
-  borderBottom: `1px solid ${theme.colors["Stroke-30%"]}`,
+  "@media": {
+    [breakpoints.desktop]: {
+      borderBottom: `1px solid ${theme.colors["Stroke-30%"]}`,
+    },
+  },
 });
 
 export const root = style({
@@ -12,9 +17,16 @@ export const root = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingTop: 120,
-  paddingBottom: 120,
+  paddingTop: 56,
+  paddingBottom: 56,
   zIndex: 1,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      paddingTop: 120,
+      paddingBottom: 120,
+    },
+  },
 });
 
 export const description = style([
@@ -24,7 +36,13 @@ export const description = style([
     margin: 0,
     color: theme.colors["White-60%"],
     maxWidth: 450,
-    marginBottom: 48,
+    marginBottom: 32,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 48,
+      },
+    },
   },
 ]);
 
@@ -34,14 +52,29 @@ export const title = style([
     textAlign: "center",
     margin: 0,
     maxWidth: 450,
-    marginBottom: 24,
+    marginBottom: 16,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 24,
+      },
+    },
   },
 ]);
 
 export const items = style({
   display: "flex",
-  gap: 16,
-  marginBottom: 48,
+  gap: 8,
+  marginBottom: 32,
+  flexDirection: "column",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      marginBottom: 48,
+      gap: 16,
+      flexDirection: "row",
+    },
+  },
 });
 
 export const item = style({
@@ -52,8 +85,14 @@ export const item = style({
   textAlign: "center",
   backgroundColor: theme.colors["Bg Card-60%"],
   borderRadius: 40,
-  padding: 32,
+  padding: 24,
   backdropFilter: "blur(40px)",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      padding: 32,
+    },
+  },
 });
 
 export const itemTitle = style([
@@ -75,12 +114,19 @@ export const itemDescription = style([
 export const itemIcon = style({
   fontSize: 24,
   aspectRatio: "1 / 1",
-  width: 56,
+  width: 48,
   borderRadius: "50%",
   boxShadow: `inset 0 0 0 0.5px ${theme.colors["Stroke-30%"]}`,
   backgroundColor: theme.colors["White-10%"],
-  marginBottom: 32,
+  marginBottom: 16,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      marginBottom: 32,
+      width: 56,
+    },
+  },
 });

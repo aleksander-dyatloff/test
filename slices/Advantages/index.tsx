@@ -32,7 +32,10 @@ const Advantages: FC<AdvantagesProps> = ({ slice }) => {
     >
       <Container className={styles.root}>
         <div className={styles.preview}>
-          <PrismicNextImage width={465} field={slice.primary.image} />
+          <PrismicNextImage
+            style={{ width: "100%", height: "auto" }}
+            field={slice.primary.image}
+          />
         </div>
 
         <div className={styles.content}>
@@ -50,7 +53,9 @@ const Advantages: FC<AdvantagesProps> = ({ slice }) => {
               </div>
             ))}
           </div>
-          <Button variant="outline">{slice.primary.action_text}</Button>
+          <Button className={styles.aciton} variant="outline">
+            {slice.primary.action_text}
+          </Button>
         </div>
       </Container>
     </section>

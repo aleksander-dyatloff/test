@@ -1,3 +1,4 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style } from "@vanilla-extract/css";
@@ -6,11 +7,20 @@ export const root = style({
   position: "relative",
   display: "flex",
   alignItems: "center",
+  flexDirection: "column",
   justifyContent: "space-between",
-  gap: 145,
-  paddingTop: 120,
-  paddingBottom: 120,
+  paddingTop: 56,
+  paddingBottom: 56,
   zIndex: 1,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flexDirection: "row",
+      paddingTop: 120,
+      paddingBottom: 120,
+      gap: 145,
+    },
+  },
 });
 
 export const content = style({
@@ -20,26 +30,41 @@ export const content = style({
 export const items = style({
   display: "flex",
   flexDirection: "column",
-  gap: 16,
+  gap: 8,
   flex: "0 0 50%",
   marginLeft: "auto",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      gap: 16,
+    },
+  },
 });
 
 export const item = style({
   borderRadius: 40,
   backdropFilter: "blur(40px)",
   backgroundColor: theme.colors["Bg Card-60%"],
-  padding: "28px 32px",
+  padding: 24,
+  flexDirection: "column",
   display: "flex",
-  gap: 24,
-  alignItems: "center",
   minHeight: 132,
+  gap: 16,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      gap: 24,
+      flexDirection: "row",
+      alignItems: "center",
+      padding: "28px 32px",
+    },
+  },
 });
 
 export const itemIcon = style({
   borderRadius: "50%",
-  flex: "0 0 56px",
-  minWidth: 56,
+  flex: "0 0 48px",
+  width: 48,
   aspectRatio: "1 / 1",
   boxShadow: `inset 0 0 0 0.5px ${theme.colors["Stroke-30%"]}`,
   backgroundColor: theme.colors["White-10%"],
@@ -47,6 +72,13 @@ export const itemIcon = style({
   alignItems: "center",
   justifyContent: "center",
   fontSize: 24,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flex: "0 0 56px",
+      width: 56,
+    },
+  },
 });
 
 export const itemContent = style({
@@ -74,7 +106,13 @@ export const title = style([
   typography.H2,
   {
     margin: 0,
-    marginBottom: 24,
+    marginBottom: 16,
+
+    "@media": {
+      [breakpoints.desktop]: {
+        marginBottom: 24,
+      },
+    },
   },
 ]);
 
@@ -86,3 +124,24 @@ export const description = style([
     marginBottom: 48,
   },
 ]);
+
+export const desktopAction = style({
+  display: "none !important",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "flex !important",
+    },
+  },
+});
+
+export const mobileAction = style({
+  width: "100%",
+  marginTop: 32,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "none !important",
+    },
+  },
+});

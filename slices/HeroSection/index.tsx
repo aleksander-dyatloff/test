@@ -23,11 +23,17 @@ const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
       <Container className={styles.root}>
         <div className={styles.content}>
           <h1 className={styles.title}>{slice.primary.title}</h1>
+          <p className={styles.description}>{slice.primary.description}</p>
           <Button>{slice.primary.action_text}</Button>
         </div>
         <div className={styles.imageWrapper}>
-          <PrismicNextImage height={580} field={slice.primary.image} />
-          <p className={styles.description}>{slice.primary.description}</p>
+          <PrismicNextImage
+            field={slice.primary.image}
+            style={{ width: "100%", height: "auto" }}
+          />
+          <p className={styles.imageWrapperDescription}>
+            {slice.primary.description}
+          </p>
         </div>
       </Container>
     </section>

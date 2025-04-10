@@ -1,3 +1,4 @@
+import breakpoints from "@/styles/breakpoints";
 import { theme } from "@/styles/theme.css";
 import { typography } from "@/styles/typography.css";
 import { style } from "@vanilla-extract/css";
@@ -6,23 +7,44 @@ export const root = style({
   position: "relative",
   display: "flex",
   flexDirection: "column",
-  gap: 48,
-  paddingTop: 48,
-  paddingBottom: 48,
+  gap: 32,
   zIndex: 1,
+  paddingTop: 56,
+  paddingBottom: 56,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      gap: 48,
+      paddingTop: 48,
+      paddingBottom: 48,
+    },
+  },
 });
 
 export const header = style({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "flex-end",
+  flexDirection: "column",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flexDirection: "row",
+    },
+  },
 });
 
 export const headerContent = style({
   display: "flex",
   flexDirection: "column",
-  gap: 24,
+  gap: 16,
   marginRight: 24,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      gap: 24,
+    },
+  },
 });
 
 export const title = style([
@@ -42,9 +64,17 @@ export const description = style([
 
 export const items = style({
   display: "flex",
-  gap: 24,
   flexWrap: "wrap",
   justifyContent: "center",
+  flexDirection: "column",
+  gap: 8,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flexDirection: "row",
+      gap: 24,
+    },
+  },
 });
 
 export const item = style({
@@ -52,18 +82,32 @@ export const item = style({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  flex: "1 1 30%",
-  minWidth: "30%",
   aspectRatio: "1 / 1",
   backgroundColor: theme.colors["Bg Card-60%"],
   borderRadius: 40,
   backdropFilter: "blur(40px)",
   padding: 32,
   textAlign: "center",
+  width: "100%",
+  flex: "0 0 100%",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      flex: "1 1 30%",
+      minWidth: "30%",
+    },
+  },
 });
 
 export const itemImage = style({
   marginBottom: 32,
+  width: 150,
+
+  "@media": {
+    [breakpoints.desktop]: {
+      width: 245,
+    },
+  },
 });
 
 export const itemTitle = style([
@@ -88,4 +132,22 @@ export const bgImage = style({
   width: "100%",
   left: 0,
   zIndex: -1,
+});
+
+export const desktopAction = style({
+  display: "none !important",
+
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "flex !important",
+    },
+  },
+});
+
+export const mobileAction = style({
+  "@media": {
+    [breakpoints.desktop]: {
+      display: "none !important",
+    },
+  },
 });
