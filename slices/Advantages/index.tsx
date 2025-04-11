@@ -4,7 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import Container from "@/components/Container/Container";
 import * as styles from "./Advantages.css";
 import Button from "@/components/Button/Button";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import FlashIcon from "@/icons/FlashIcon";
 import Setting3Icon from "@/icons/Setting3Icon";
 import DocumentTextIcon from "@/icons/DocumentTextIcon";
@@ -54,9 +54,12 @@ const Advantages: FC<AdvantagesProps> = ({ slice }) => {
               </div>
             ))}
           </div>
-          <Button className={styles.aciton} variant="outline">
-            {slice.primary.action_text}
-          </Button>
+
+          <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+            <Button variant="outline" className={styles.aciton}>
+              {slice.primary.action.text}
+            </Button>
+          </PrismicNextLink>
         </div>
       </Container>
     </section>

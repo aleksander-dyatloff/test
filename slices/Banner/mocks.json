@@ -13,15 +13,19 @@
 				"value": "aid",
 				"type": "Text"
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "poet",
-				"type": "Text"
-			},
 			"section_id": {
 				"__TYPE__": "FieldContent",
 				"value": "tight",
 				"type": "Text"
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"key": "fb533c99-82a6-4e93-a2d1-1a91cc3ed60f",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "freedom"
+				}
 			}
 		},
 		"items": []

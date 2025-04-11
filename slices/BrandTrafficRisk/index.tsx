@@ -4,7 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import Container from "@/components/Container/Container";
 import * as styles from "./BrandTrafficRisk.css";
 import Button from "@/components/Button/Button";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `BrandTrafficRisk`.
@@ -28,9 +28,11 @@ const BrandTrafficRisk: FC<BrandTrafficRiskProps> = ({ slice }) => {
             <h2 className={styles.title}>{slice.primary.title}</h2>
             <p className={styles.description}>{slice.primary.description}</p>
           </div>
-          <Button className={styles.desktopAction} variant="outline">
-            {slice.primary.action_text}
-          </Button>
+          <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+            <Button variant="outline" className={styles.desktopAction}>
+              {slice.primary.action.text}
+            </Button>
+          </PrismicNextLink>
         </div>
         <div className={styles.items}>
           {slice.primary.items.map((item) => (
@@ -46,9 +48,11 @@ const BrandTrafficRisk: FC<BrandTrafficRiskProps> = ({ slice }) => {
             </div>
           ))}
         </div>
-        <Button className={styles.mobileAction} variant="outline">
-          {slice.primary.action_text}
-        </Button>
+        <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+          <Button variant="outline" className={styles.mobileAction}>
+            {slice.primary.action.text}
+          </Button>
+        </PrismicNextLink>
       </Container>
     </section>
   );

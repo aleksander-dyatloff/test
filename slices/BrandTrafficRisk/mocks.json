@@ -13,11 +13,6 @@
 				"value": "was",
 				"type": "Text"
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "form",
-				"type": "Text"
-			},
 			"items": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -74,6 +69,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "business",
 				"type": "Text"
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"key": "a8d6fc2f-330a-4d53-9ab5-0988198b426b",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "elephant"
+				}
 			}
 		},
 		"items": []

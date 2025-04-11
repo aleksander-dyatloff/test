@@ -26,13 +26,6 @@
             "placeholder": ""
           }
         },
-        "action_text": {
-          "type": "Text",
-          "config": {
-            "label": "Action Text",
-            "placeholder": ""
-          }
-        },
         "plans": {
           "type": "Group",
           "config": {
@@ -62,18 +55,22 @@
                   "multi": "strong"
                 }
               },
-              "plan_action_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Plan Action Text",
-                  "placeholder": ""
-                }
-              },
               "plan_benefits_list": {
                 "type": "Text",
                 "config": {
                   "label": "Plan Benefits List",
                   "placeholder": ""
+                }
+              },
+              "plan_action": {
+                "type": "Link",
+                "config": {
+                  "label": "Plan Action",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
                 }
               }
             }
@@ -84,6 +81,17 @@
           "config": {
             "label": "Section ID",
             "placeholder": ""
+          }
+        },
+        "action": {
+          "type": "Link",
+          "config": {
+            "label": "Action",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

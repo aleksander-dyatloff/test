@@ -31,11 +31,6 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "plus",
-				"type": "Text"
-			},
 			"items": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -66,6 +61,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "tomorrow",
 				"type": "Text"
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"key": "a7538abb-7095-4b86-b40a-1b1728c594a2",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "let"
+				}
 			}
 		},
 		"items": []

@@ -4,7 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import Container from "@/components/Container/Container";
 import * as styles from "./HeroSection.css";
 import Button from "@/components/Button/Button";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `HeroSection`.
@@ -25,7 +25,9 @@ const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
         <div className={styles.content}>
           <h1 className={styles.title}>{slice.primary.title}</h1>
           <p className={styles.description}>{slice.primary.description}</p>
-          <Button>{slice.primary.action_text}</Button>
+          <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+            <Button>{slice.primary.action.text}</Button>
+          </PrismicNextLink>
         </div>
         <div className={styles.imageWrapper}>
           <PrismicNextImage

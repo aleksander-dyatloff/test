@@ -8,6 +8,7 @@ import SquareIcon from "@/icons/SquareIcon";
 import StatusUpIcon from "@/icons/StatusUpIcon";
 import ConvertShapeIcon from "@/icons/ConvertShapeIcon";
 import { theme } from "@/styles/theme.css";
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `Benefits`.
@@ -54,7 +55,10 @@ const Benefits: FC<BenefitsProps> = ({ slice }) => {
             </div>
           ))}
         </div>
-        <Button variant="outline">{slice.primary.action_text}</Button>
+
+        <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+          <Button variant="outline">{slice.primary.action.text}</Button>
+        </PrismicNextLink>
       </Container>
     </section>
   );

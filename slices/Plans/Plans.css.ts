@@ -259,3 +259,7 @@ export const sliderDotActive = style({
   width: 32,
   backgroundColor: theme.colors.White,
 });
+
+export const planBG = style({
+  pointerEvents: "none",
+});

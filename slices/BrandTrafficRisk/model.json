@@ -26,13 +26,6 @@
             "placeholder": ""
           }
         },
-        "action_text": {
-          "type": "Text",
-          "config": {
-            "label": "Action Text",
-            "placeholder": ""
-          }
-        },
         "items": {
           "type": "Group",
           "config": {
@@ -69,6 +62,17 @@
           "config": {
             "label": "Section ID",
             "placeholder": ""
+          }
+        },
+        "action": {
+          "type": "Link",
+          "config": {
+            "label": "Action",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

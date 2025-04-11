@@ -13,11 +13,6 @@
 				"value": "sent",
 				"type": "Text"
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "refer",
-				"type": "Text"
-			},
 			"plans": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -55,19 +50,23 @@
 								}
 							],
 							[
-								"plan_action_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "guide",
-									"type": "Text"
-								}
-							],
-							[
 								"plan_benefits_list",
 								{
 									"__TYPE__": "FieldContent",
 									"value": "introduced",
 									"type": "Text"
+								}
+							],
+							[
+								"plan_action",
+								{
+									"key": "bd8e1e39-8e9b-49ec-a702-fe1b7b115954",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "equally"
+									}
 								}
 							]
 						]
@@ -78,6 +77,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "coach",
 				"type": "Text"
+			},
+			"action": {
+				"key": "b3ec5244-da93-4286-9516-b8b94bfc3420",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "loss"
+				}
 			}
 		},
 		"items": []

@@ -201,16 +201,6 @@ export interface AdvantagesSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Action Text field in *Advantages → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: advantages.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Items field in *Advantages → Default → Primary*
    *
    * - **Field Type**: Group
@@ -229,6 +219,16 @@ export interface AdvantagesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *Advantages → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advantages.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -286,16 +286,6 @@ export interface BannerSliceDefaultPrimary {
   description: prismic.KeyTextField;
 
   /**
-   * Action Text field in *Banner → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: banner.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Section ID field in *Banner → Default → Primary*
    *
    * - **Field Type**: Text
@@ -304,6 +294,16 @@ export interface BannerSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *Banner → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -383,16 +383,6 @@ export interface BenefitsSliceDefaultPrimary {
   description: prismic.KeyTextField;
 
   /**
-   * Action Text field in *Benefits → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: benefits.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Items field in *Benefits → Default → Primary*
    *
    * - **Field Type**: Group
@@ -411,6 +401,16 @@ export interface BenefitsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *Benefits → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefits.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -503,16 +503,6 @@ export interface BrandTrafficRiskSliceDefaultPrimary {
   description: prismic.KeyTextField;
 
   /**
-   * Action Text field in *BrandTrafficRisk → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: brand_traffic_risk.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Items field in *BrandTrafficRisk → Default → Primary*
    *
    * - **Field Type**: Group
@@ -533,6 +523,16 @@ export interface BrandTrafficRiskSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *BrandTrafficRisk → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: brand_traffic_risk.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -865,16 +865,6 @@ export interface HeroSectionSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * Action Text field in *HeroSection → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_section.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Description field in *HeroSection → Default → Primary*
    *
    * - **Field Type**: Text
@@ -903,6 +893,16 @@ export interface HeroSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *HeroSection → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -1105,16 +1105,6 @@ export interface PlansSliceDefaultPrimaryPlansItem {
   plan_price: prismic.RichTextField;
 
   /**
-   * Plan Action Text field in *Plans → Default → Primary → Plans*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: plans.default.primary.plans[].plan_action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  plan_action_text: prismic.KeyTextField;
-
-  /**
    * Plan Benefits List field in *Plans → Default → Primary → Plans*
    *
    * - **Field Type**: Text
@@ -1123,6 +1113,22 @@ export interface PlansSliceDefaultPrimaryPlansItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   plan_benefits_list: prismic.KeyTextField;
+
+  /**
+   * Plan Action field in *Plans → Default → Primary → Plans*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: plans.default.primary.plans[].plan_action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  plan_action: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**
@@ -1150,16 +1156,6 @@ export interface PlansSliceDefaultPrimary {
   description: prismic.KeyTextField;
 
   /**
-   * Action Text field in *Plans → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: plans.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Plans field in *Plans → Default → Primary*
    *
    * - **Field Type**: Group
@@ -1178,6 +1174,16 @@ export interface PlansSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *Plans → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: plans.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -1257,16 +1263,6 @@ export interface SolutionSectionSliceDefaultPrimary {
   description: prismic.KeyTextField;
 
   /**
-   * Action Text field in *SolutionSection → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: solution_section.default.primary.action_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  action_text: prismic.KeyTextField;
-
-  /**
    * Items field in *SolutionSection → Default → Primary*
    *
    * - **Field Type**: Group
@@ -1287,6 +1283,16 @@ export interface SolutionSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   section_id: prismic.KeyTextField;
+
+  /**
+   * Action field in *SolutionSection → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: solution_section.default.primary.action
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**

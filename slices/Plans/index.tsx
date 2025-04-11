@@ -8,6 +8,7 @@ import Button from "@/components/Button/Button";
 import classNames from "classnames";
 import BackgroundImage from "./Bg.png";
 import Image from "next/image";
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `Plans`.
@@ -70,7 +71,12 @@ const Plans: FC<PlansProps> = ({ slice }) => {
                 )}
               >
                 {index % 2 !== 0 && (
-                  <Image fill src={BackgroundImage.src} alt="bg" />
+                  <Image
+                    className={styles.planBG}
+                    fill
+                    src={BackgroundImage.src}
+                    alt="bg"
+                  />
                 )}
                 <header className={styles.itemHeader}>
                   <h4 className={styles.itemTitle}>{plan.plan_title}</h4>
@@ -86,14 +92,22 @@ const Plans: FC<PlansProps> = ({ slice }) => {
                     ?.split(",")
                     .map((benefit) => <li key={benefit}>{benefit}</li>)}
                 </ul>
-                <Button
-                  variant={
-                    index % 2 !== 0 && styles.itemActive ? undefined : "outline"
-                  }
-                  className={styles.itemAction}
+                <PrismicNextLink
+                  field={plan.plan_action}
+                  passHref
+                  legacyBehavior
                 >
-                  {plan.plan_action_text}
-                </Button>
+                  <Button
+                    variant={
+                      index % 2 !== 0 && styles.itemActive
+                        ? undefined
+                        : "outline"
+                    }
+                    className={styles.itemAction}
+                  >
+                    {plan.plan_action.text}
+                  </Button>
+                </PrismicNextLink>
               </article>
             ))}
           </div>
@@ -109,7 +123,9 @@ const Plans: FC<PlansProps> = ({ slice }) => {
           ))}
         </div>
         <div className={styles.footer}>
-          <Button variant="link">{slice.primary.action_text}</Button>
+          <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+            <Button variant="link">{slice.primary.action.text}</Button>
+          </PrismicNextLink>
         </div>
       </Container>
     </section>

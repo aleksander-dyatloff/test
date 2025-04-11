@@ -13,11 +13,6 @@
 				"value": "sale",
 				"type": "Text"
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "weak",
-				"type": "Text"
-			},
 			"items": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -48,6 +43,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "country",
 				"type": "Text"
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"key": "1bc05a5f-dbd7-4d65-b2b3-271b80b088b5",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "stiff"
+				}
 			}
 		},
 		"items": []

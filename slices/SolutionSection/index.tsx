@@ -8,6 +8,7 @@ import GlobalSearchIcon from "@/icons/GlobalSearchIcon";
 import LayerIcon from "@/icons/LayerIcon";
 import RankingIcon from "@/icons/RankingIcon";
 import { theme } from "@/styles/theme.css";
+import { PrismicNextLink } from "@prismicio/next";
 /**
  * Props for `SolutionSection`.
  */
@@ -40,9 +41,12 @@ const SolutionSection: FC<SolutionSectionProps> = ({ slice }) => {
         <div className={styles.content}>
           <h2 className={styles.title}>{slice.primary.title}</h2>
           <p className={styles.description}>{slice.primary.description}</p>
-          <Button className={styles.desktopAction} variant="outline">
-            {slice.primary.action_text}
-          </Button>
+
+          <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+            <Button variant="outline" className={styles.desktopAction}>
+              {slice.primary.action.text}
+            </Button>
+          </PrismicNextLink>
         </div>
         <div className={styles.items}>
           {slice.primary.items.map((item, index) => (
@@ -62,9 +66,11 @@ const SolutionSection: FC<SolutionSectionProps> = ({ slice }) => {
             </div>
           ))}
         </div>
-        <Button className={styles.mobileAction} variant="outline">
-          {slice.primary.action_text}
-        </Button>
+        <PrismicNextLink field={slice.primary.action} passHref legacyBehavior>
+          <Button variant="outline" className={styles.mobileAction}>
+            {slice.primary.action.text}
+          </Button>
+        </PrismicNextLink>
       </Container>
     </section>
   );

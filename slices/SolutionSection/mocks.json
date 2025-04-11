@@ -13,11 +13,6 @@
 				"value": "join",
 				"type": "Text"
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "attack",
-				"type": "Text"
-			},
 			"items": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -48,6 +43,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "planned",
 				"type": "Text"
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"key": "17006546-a4be-46af-8809-aa3be8cb3cef",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "social"
+				}
 			}
 		},
 		"items": []

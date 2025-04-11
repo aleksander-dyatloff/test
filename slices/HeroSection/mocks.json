@@ -8,11 +8,6 @@
 				"value": "roll",
 				"type": "Text"
 			},
-			"action_text": {
-				"__TYPE__": "FieldContent",
-				"value": "shaking",
-				"type": "Text"
-			},
 			"description": {
 				"__TYPE__": "FieldContent",
 				"value": "make",
@@ -45,6 +40,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "which",
 				"type": "Text"
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"key": "acf870a0-b3d7-48e9-872b-936923c1f930",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "higher"
+				}
 			}
 		},
 		"items": []
