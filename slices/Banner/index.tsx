@@ -7,6 +7,7 @@ import Button from "@/components/Button/Button";
 import Image from "next/image";
 import BGImage from "./Bg.png";
 import BGMobileImage from "./Mobile-Bg.png";
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `Banner`.
@@ -28,7 +29,13 @@ const Banner: FC<BannerProps> = ({ slice }) => {
           <div className={styles.content}>
             <h2 className={styles.title}>{slice.primary.title}</h2>
             <p className={styles.description}>{slice.primary.description}</p>
-            <Button>{slice.primary.action_text}</Button>
+            <PrismicNextLink
+              field={slice.primary.action}
+              passHref
+              legacyBehavior
+            >
+              <Button>{slice.primary.action.text}</Button>
+            </PrismicNextLink>
           </div>
           <div className={styles.desktopImage}>
             <Image src={BGImage.src} alt="bg" fill />
