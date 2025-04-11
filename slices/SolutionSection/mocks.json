@@ -43,6 +43,11 @@
 						]
 					}
 				]
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "planned",
+				"type": "Text"
 			}
 		},
 		"items": []

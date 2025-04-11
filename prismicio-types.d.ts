@@ -4,6 +4,76 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *Header → Menu*
+ */
+export interface HeaderDocumentDataMenuItem {
+  /**
+   * Menu Link field in *Header → Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.menu[].menu_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  menu_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Content for Header documents
+ */
+interface HeaderDocumentData {
+  /**
+   * Action Link field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.action_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Menu field in *Header*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.menu[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  menu: prismic.GroupField<Simplify<HeaderDocumentDataMenuItem>>;
+}
+
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<HeaderDocumentData>,
+    "header",
+    Lang
+  >;
+
 type LandingPageDocumentDataSlicesSlice =
   | FormSectionSlice
   | FaqSectionSlice
@@ -79,7 +149,7 @@ export type LandingPageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = LandingPageDocument;
+export type AllDocumentTypes = HeaderDocument | LandingPageDocument;
 
 /**
  * Item in *Advantages → Default → Primary → Items*
@@ -149,6 +219,16 @@ export interface AdvantagesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   items: prismic.GroupField<Simplify<AdvantagesSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * Section ID field in *Advantages → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advantages.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -214,6 +294,16 @@ export interface BannerSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   action_text: prismic.KeyTextField;
+
+  /**
+   * Section ID field in *Banner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -311,6 +401,16 @@ export interface BenefitsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   items: prismic.GroupField<Simplify<BenefitsSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * Section ID field in *Benefits → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefits.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -423,6 +523,16 @@ export interface BrandTrafficRiskSliceDefaultPrimary {
   items: prismic.GroupField<
     Simplify<BrandTrafficRiskSliceDefaultPrimaryItemsItem>
   >;
+
+  /**
+   * Section ID field in *BrandTrafficRisk → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: brand_traffic_risk.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -513,6 +623,16 @@ export interface FaqSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   items: prismic.GroupField<Simplify<FaqSectionSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * Section ID field in *FaqSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_section.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -688,6 +808,16 @@ export interface FormSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   comment_field_placeholder: prismic.KeyTextField;
+
+  /**
+   * Section ID field in *FormSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: form_section.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -763,6 +893,16 @@ export interface HeroSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Section ID field in *HeroSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -888,6 +1028,16 @@ export interface PartnershipsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   cards: prismic.GroupField<Simplify<PartnershipsSliceDefaultPrimaryCardsItem>>;
+
+  /**
+   * Section ID field in *Partnerships → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partnerships.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -1018,6 +1168,16 @@ export interface PlansSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   plans: prismic.GroupField<Simplify<PlansSliceDefaultPrimaryPlansItem>>;
+
+  /**
+   * Section ID field in *Plans → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: plans.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -1117,6 +1277,16 @@ export interface SolutionSectionSliceDefaultPrimary {
   items: prismic.GroupField<
     Simplify<SolutionSectionSliceDefaultPrimaryItemsItem>
   >;
+
+  /**
+   * Section ID field in *SolutionSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: solution_section.default.primary.section_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_id: prismic.KeyTextField;
 }
 
 /**
@@ -1170,6 +1340,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      HeaderDocument,
+      HeaderDocumentData,
+      HeaderDocumentDataMenuItem,
       LandingPageDocument,
       LandingPageDocumentData,
       LandingPageDocumentDataSlicesSlice,

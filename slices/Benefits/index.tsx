@@ -32,6 +32,7 @@ const colorsMap: Record<number, string> = {
 const Benefits: FC<BenefitsProps> = ({ slice }) => {
   return (
     <section
+      id={slice.primary.section_id ?? undefined}
       className={styles.wrapper}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}

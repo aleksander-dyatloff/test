@@ -21,6 +21,7 @@ const FaqSection: FC<FaqSectionProps> = ({ slice }) => {
 
   return (
     <section
+      id={slice.primary.section_id ?? undefined}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >

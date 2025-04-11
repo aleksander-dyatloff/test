@@ -17,6 +17,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "poet",
 				"type": "Text"
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "tight",
+				"type": "Text"
 			}
 		},
 		"items": []

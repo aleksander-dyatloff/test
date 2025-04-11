@@ -90,6 +90,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "log",
 				"type": "Text"
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "problem",
+				"type": "Text"
 			}
 		},
 		"items": []

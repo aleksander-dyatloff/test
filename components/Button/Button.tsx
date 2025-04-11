@@ -1,11 +1,11 @@
+import classNames from "classnames";
 import {
-  ButtonHTMLAttributes,
+  AnchorHTMLAttributes,
   DetailedHTMLProps,
   FC,
   PropsWithChildren,
 } from "react";
 import * as styles from "./Button.css";
-import classNames from "classnames";
 
 interface Props {
   variant?: "primary" | "outline" | "ghost" | "link";
@@ -15,13 +15,13 @@ const Button: FC<
   PropsWithChildren<
     Props &
       DetailedHTMLProps<
-        ButtonHTMLAttributes<HTMLButtonElement>,
-        HTMLButtonElement
+        AnchorHTMLAttributes<HTMLAnchorElement>,
+        HTMLAnchorElement
       >
   >
 > = ({ variant = "primary", children, className, ...restProps }) => {
   return (
-    <button
+    <a
       className={classNames(styles.root, styles.variant[variant], className)}
       {...restProps}
     >
@@ -43,7 +43,7 @@ const Button: FC<
           />
         </svg>
       )}
-    </button>
+    </a>
   );
 };
 

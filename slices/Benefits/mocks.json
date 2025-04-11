@@ -43,6 +43,11 @@
 						]
 					}
 				]
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "country",
+				"type": "Text"
 			}
 		},
 		"items": []

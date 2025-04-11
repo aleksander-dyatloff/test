@@ -17,6 +17,7 @@ export type HeroSectionProps = SliceComponentProps<Content.HeroSectionSlice>;
 const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
   return (
     <section
+      id={slice.primary.section_id ?? undefined}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >

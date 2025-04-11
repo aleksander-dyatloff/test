@@ -19,7 +19,6 @@
 				"type": "Text"
 			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
@@ -38,7 +37,14 @@
 					"background": "transparent"
 				},
 				"alt": "start",
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "which",
+				"type": "Text"
 			}
 		},
 		"items": []

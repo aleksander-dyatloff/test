@@ -10,6 +10,7 @@ globalStyle("*", {
 });
 
 globalStyle("html, body", {
+  scrollBehavior: "smooth",
   fontFamily: primaryFontName,
   margin: 0,
   padding: 0,

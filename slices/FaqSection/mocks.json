@@ -38,6 +38,11 @@
 						]
 					}
 				]
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "tales",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -32,6 +32,7 @@ const colorsMap: Record<number, string> = {
 const SolutionSection: FC<SolutionSectionProps> = ({ slice }) => {
   return (
     <section
+      id={slice.primary.section_id ?? undefined}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >

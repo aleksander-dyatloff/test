@@ -110,6 +110,13 @@
             "label": "Comment Field Placeholder",
             "placeholder": ""
           }
+        },
+        "section_id": {
+          "type": "Text",
+          "config": {
+            "label": "Section ID",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

@@ -1,13 +1,23 @@
+import MobileMenuIcon from "@/icons/MobileMenuIcon";
+import { HeaderDocumentData, Simplify } from "@/prismicio-types";
+import { PrismicDocumentWithoutUID } from "@prismicio/client";
+import { PrismicNextLink } from "@prismicio/next";
+import Link from "next/link";
 import { FC } from "react";
-import * as styles from "./Header.css";
+import Button from "../Button/Button";
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
-import Menu from "../Menu/Menu";
-import Button from "../Button/Button";
-import Link from "next/link";
-import MobileMenuIcon from "@/icons/MobileMenuIcon";
+import * as styles from "./Header.css";
 
-const Header: FC = () => {
+interface Props {
+  data: PrismicDocumentWithoutUID<
+    Simplify<HeaderDocumentData>,
+    "header",
+    string
+  >;
+}
+
+const Header: FC<Props> = ({ data }) => {
   return (
     <header className={styles.root}>
       <Container className={styles.container}>
@@ -20,18 +30,26 @@ const Header: FC = () => {
           </Link>
         </div>
         <div className={styles.middle}>
-          <Menu
-            items={[
-              { label: "Solution", url: "" },
-              { label: "Advantages", url: "" },
-              { label: "White Label", url: "" },
-              { label: "Pricing", url: "" },
-              { label: "FAQ", url: "" },
-            ]}
-          />
+          <nav className={styles.menu}>
+            {data.data.menu.map((menuItem) => (
+              <PrismicNextLink
+                field={menuItem.menu_link}
+                key={menuItem.menu_link.text}
+                className={styles.link}
+              >
+                {menuItem.menu_link.text}
+              </PrismicNextLink>
+            ))}
+          </nav>
         </div>
         <div className={styles.end}>
-          <Button variant="ghost">Start now</Button>
+          <PrismicNextLink
+            field={data.data.action_link}
+            passHref
+            legacyBehavior
+          >
+            <Button variant="ghost">{data.data.action_link.text}</Button>
+          </PrismicNextLink>
         </div>
       </Container>
     </header>

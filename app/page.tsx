@@ -30,7 +30,9 @@ async function Home() {
     .getByUID("landing_page", "homepage")
     .catch(() => null);
 
-  if (!page) return notFound();
+  const header = await client.getByType("header").catch(() => null);
+
+  if (!page || !header) return notFound();
 
   return (
     <>
@@ -47,7 +49,7 @@ async function Home() {
       >
         <Image fill src={BackgroundImage.src} alt="bg image" />
       </div>
-      <Header />
+      <Header data={header.results[0]} />
       <SliceZone slices={page.data.slices} components={components} />
     </>
   );

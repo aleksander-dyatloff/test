@@ -73,6 +73,11 @@
 						]
 					}
 				]
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "coach",
+				"type": "Text"
 			}
 		},
 		"items": []
