@@ -103,8 +103,16 @@ export const list = style({
 export const item = style([
   typography.H5,
   {
+    cursor: "pointer",
+    backgroundColor: "transparent",
+    border: "none",
+    font: "inherit",
+    color: "inherit",
+    textAlign: "left",
     borderTop: `1px solid ${theme.colors["White-10%"]}`,
     padding: "16px 24px",
+    transitionProperty: "font-size, font-weight, color",
+    transitionDuration: "300ms",
 
     ":last-child": {
       borderBottom: `1px solid ${theme.colors["White-10%"]}`,
@@ -115,6 +123,22 @@ export const item = style([
         padding: "40px 24px",
       },
     },
+  },
+]);
+
+export const itemActive = style({
+  fontSize: 14,
+  lineHeight: "130%",
+  fontWeight: 400,
+  letterSpacing: "0px",
+  color: theme.colors["White"],
+});
+
+export const itemDescription = style([
+  typography["Body/M regular"],
+  {
+    paddingTop: 24,
+    color: theme.colors["White-60%"],
   },
 ]);
 

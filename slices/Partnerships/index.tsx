@@ -1,4 +1,5 @@
-import { FC, ReactNode } from "react";
+"use client";
+import { FC, ReactNode, useState } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import * as styles from "./Partnerships.css";
@@ -7,6 +8,8 @@ import WalletIcon from "@/icons/WalletIcon";
 import BriefcaseIcon from "@/icons/BriefcaseIcon";
 import ShieldTickIcon from "@/icons/ShieldTickIcon";
 import { theme } from "@/styles/theme.css";
+import Accordion from "@/components/Accordion/Accordion";
+import classNames from "classnames";
 
 /**
  * Props for `Partnerships`.
@@ -29,6 +32,10 @@ const colorsMap: Record<number, string> = {
  * Component for "Partnerships" Slices.
  */
 const Partnerships: FC<PartnershipsProps> = ({ slice }) => {
+  const [activeItem, setActiveItem] = useState<string | null>(
+    slice.primary.items[0]?.item_title ?? null
+  );
+
   return (
     <section
       id={slice.primary.section_id ?? undefined}
@@ -45,9 +52,20 @@ const Partnerships: FC<PartnershipsProps> = ({ slice }) => {
         <div className={styles.content}>
           <div className={styles.list}>
             {slice.primary.items.map((item) => (
-              <div key={item.item_title} className={styles.item}>
-                {item.item_title}
-              </div>
+              <button
+                onClick={() => setActiveItem(item.item_title)}
+                key={item.item_title}
+                className={classNames(styles.item, {
+                  [styles.itemActive]: activeItem === item.item_title,
+                })}
+              >
+                <div>{item.item_title}</div>
+                <Accordion isOpen={activeItem === item.item_title}>
+                  <div className={styles.itemDescription}>
+                    {item.item_description}
+                  </div>
+                </Accordion>
+              </button>
             ))}
           </div>
           <div className={styles.cards}>

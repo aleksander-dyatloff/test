@@ -25,12 +25,10 @@ const Plans: FC<PlansProps> = ({ slice }) => {
   const handleScrollPlans: UIEventHandler = () => {
     if (!plansRef.current) return;
 
-    const plansRect = plansRef.current.getBoundingClientRect();
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
 
-    const deepElement = document.elementFromPoint(
-      plansRect.x + plansRect.width / 2,
-      plansRect.y + plansRect.height / 2
-    );
+    const deepElement = document.elementFromPoint(centerX, centerY);
 
     const planElement = deepElement?.closest(`.${styles.item}`);
 

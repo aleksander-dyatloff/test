@@ -25,7 +25,7 @@ const Header: FC<Props> = ({ data }) => {
           <MobileMenuIcon />
         </button>
         <div className={styles.logoWrapper}>
-          <Link href="/" className={styles.logo}>
+          <Link href="/" className={styles.logo} title="Home">
             <Logo />
           </Link>
         </div>

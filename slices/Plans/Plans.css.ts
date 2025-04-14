@@ -86,7 +86,6 @@ export const itemsWrapper = style({
   overflow: "hidden",
   marginLeft: "calc((100vw - 343px) / -2)",
   marginRight: "calc((100vw - 343px) / -2)",
-  height: 632,
 
   "@media": {
     [breakpoints.desktop]: {
@@ -106,6 +105,12 @@ export const items = style({
   paddingLeft: "calc((100vw - 343px) / 2)",
   paddingRight: "calc((100vw - 343px) / 2)",
   paddingBottom: 16,
+
+  selectors: {
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
+  },
 
   "@media": {
     [breakpoints.desktop]: {
