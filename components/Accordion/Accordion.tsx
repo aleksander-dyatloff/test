@@ -99,7 +99,7 @@ const Accordion: FC<PropsWithChildren<Props>> = ({
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [isOpen, direction, duration]);
+  }, [isOpen, direction, duration, isFirstRender]);
 
   return (
     <div

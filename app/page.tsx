@@ -6,6 +6,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import BackgroundImage from "./bg.png";
 
+export const revalidate = 60;
+
 export async function generateMetadata() {
   const client = createClient();
   const page = await client
