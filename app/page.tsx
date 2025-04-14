@@ -6,7 +6,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import BackgroundImage from "./bg.png";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -32,7 +32,7 @@ async function Home() {
     .getByUID("landing_page", "homepage")
     .catch(() => null);
 
-  const header = await client.getByType("header").catch(() => null);
+  const header = await client.getSingle("header").catch(() => null);
 
   if (!page || !header) return notFound();
 
@@ -51,7 +51,7 @@ async function Home() {
       >
         <Image fill src={BackgroundImage.src} alt="bg image" />
       </div>
-      <Header data={header.results[0]} />
+      <Header data={header} />
       <SliceZone slices={page.data.slices} components={components} />
     </>
   );
